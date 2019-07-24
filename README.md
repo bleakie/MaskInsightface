@@ -2,13 +2,13 @@
 
 ssh(人脸检测)+prnet(68 landmark 人脸对齐， 3d人脸mask)+insightface
 
+![Identification results on own data](https://github.com/bleakie/MaskInsightface/blob/master/images/Akbar_Al_Baker_0001.jpg)
+
 ### 0.安装
 
 ```
-
 (1)mxnet
 (2)tensorflow
-
 ```
 
 ### 1.生成对齐后的数据集
@@ -33,14 +33,12 @@ cd make_rec
 
 ```
 python gen_valdatasets.py
-
 ```
 
 #### 1.4.生成数据
 
 ```
 python3 gen_datasets.py  #完成后会output下生成train.lst
-
 ```
 ### 2.验证model精度
 
@@ -48,14 +46,12 @@ python3 gen_datasets.py  #完成后会output下生成train.lst
 
 ```
 python3 -u ./src/eval/verification.py --gpu 0 --model "./models/glint-mobilenet/model,1" --target 'lfw'
-
 ```
 
 #### 2.2.快捷
 
 ```
 sh verification.sh
-
 ```
 
 ### 3.训练
@@ -64,18 +60,13 @@ sh verification.sh
 
 ```
 CUDA_VISIBLE_DEVICES='2,3,4,5' python3 -u train.py --network r100 --loss arcface --per-batch-size 64 2>&1 > log.log &
-
 ```
-
-
 
 #### 3.2.如果想要合并不同数据集
 
 ```
-CUDA_VISIBLE_DEVICES=0 python3 src/data/dataset_merge.py --include 001_data,002_data --output ms1m+vgg --model ../../models/model-glink-gate/model,1
-
+CUDA_VISIBLE_DEVICES=0 python3 src/data/dataset_merge.py --include 001_data,002_data --output ms1m+vgg --model ../../models/model,1
 ```
-
 
 ### 4.result
 '参数设置'
@@ -88,8 +79,6 @@ lr_steps [105000, 125000, 150000], end with 180001, batch-size:256, 4gpu
 then retrain with lr = 0.01, lr_steps[200000, 300000, 400000]
 
 
-|  Method  |     精度(%)    | 
-| -------- | -------------- |
-|  LFW     |     99.82+     |
-|  CFP_FP  |     98.50+     |
-|  AgeDB30 |     98.25+     |
+|  Data    |      LFW   |    CFP_FP    |  AgeDB30  |
+| -------- | -----------|--------------|---------- |
+|  ACCU(%) |    99.82+  |    98.50+    |  98.25+   |
