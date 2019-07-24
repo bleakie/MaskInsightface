@@ -2,7 +2,7 @@
 
 ssh(人脸检测)+prnet(68 landmark 人脸对齐， 3d人脸mask)+insightface
 
-![Identification results on own data](https://github.com/bleakie/MaskInsightface/blob/master/images/Akbar_Al_Baker_0001.jpg)
+![Identification results on own data](https://github.com/bleakie/MaskInsightface/blob/master/images/Akbar_Al_Baker_0001.jpg,https://github.com/bleakie/MaskInsightface/blob/master/images/Abner_Martinez_0001.jpg)
 
 ### 0.安装
 
