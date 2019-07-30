@@ -1,7 +1,8 @@
 ## insightface制作自己的数据及其训练 ##
 
-说明：算法集成insightface：https://github.com/deepinsight/insightface 改进地方：
-ssh(人脸检测)+prnet(68 landmark 人脸对齐， 3d人脸mask)+insightface
+说明：算法集成insightface：https://github.com/deepinsight/insightface
+
+改进地方：ssh(人脸检测)+prnet(68 landmark 人脸对齐， 3d人脸mask)+insightface
 
 ```
 (1)修改人脸检测器（优化后的SSH，误检率更低，对大角度和blur的face进行过滤）
