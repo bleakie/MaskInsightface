@@ -1,6 +1,13 @@
 ## insightface制作自己的数据及其训练 ##
 
+说明：算法集成insightface：https://github.com/deepinsight/insightface 改进地方：
 ssh(人脸检测)+prnet(68 landmark 人脸对齐， 3d人脸mask)+insightface
+
+```
+(1)修改人脸检测器（优化后的SSH，误检率更低，对大角度和blur的face进行过滤）
+(2)使用68个点的landmark，prnet的对齐效果更准
+(3)利用prnet拟合有效区域的人脸位置，抠出背景，以平均人脸像素填充背景，减少噪声影响，会在图片质量较好的情况下提高识别
+```
 
 ![MASK0](https://github.com/bleakie/MaskInsightface/blob/master/images/Akbar_Al_Baker_0001.jpg)
 
