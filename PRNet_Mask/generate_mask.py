@@ -78,12 +78,12 @@ def align_face(input, preds, canonical_vertices, target_size=(318,361)):
     dst = cv2.warpPerspective(input_crop, AM, target_size, flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
 
     #crop transformed image
-    x0 = max(0, int(x0))
-    x1 = min(dst.shape[1],int(x1))+1
-    y0 = max(0, int(y0))
-    y1 = min(dst.shape[0],int(y1))+1
-    dst_crop = dst[y0:y1, x0:x1,:]
-    return dst_crop
+    #x0 = max(0, int(x0))
+    #x1 = min(dst.shape[1],int(x1))+1
+    #y0 = max(0, int(y0))
+    #y1 = min(dst.shape[0],int(y1))+1
+    #dst_crop = dst[y0:y1, x0:x1,:]
+    return dst
 
 def generate_mask(image, prn, max_bbox, bool_mask = True):
     if image.shape[2] > 3:
