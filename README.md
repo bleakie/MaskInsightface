@@ -84,9 +84,11 @@ network backbone: r100 ( output=E, emb_size=512, prelu )
 
 loss function: arcface(m=0.5)
 
-lr_steps [105000, 125000, 150000], end with 180001, batch-size:256, 4gpu
+batch-size:256, 4gpu, config.fc7_wd_mult = 10
+ 
+lr = 0.004, lr_steps [105000, 125000, 150000], default.wd = 0.0005, end with 180001,
 
-then retrain with lr = 0.01, lr_steps[200000, 300000, 400000]
+then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.00001
 
 
 |  Data    |      LFW   |    CFP_FP    |  AgeDB30  |
