@@ -95,5 +95,11 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
 | -------- | -----------|--------------|---------- |
 |  ACCU(%) |    99.82+  |    98.50+    |  98.25+   |
 
+### 5.预训练模型
+
+人脸识别预训练模型（模型基于glint和私有数据训练，在私有数据上拥有0.88的F1-score，insightface原始模型0.56）
+
+链接: https://pan.baidu.com/s/1GTBJf71Axwjs_yo5klAm9Q 提取码: uxi6 
+
 ## Todo
 释放训练好的模型（SSH,PRNET,人脸识别）
