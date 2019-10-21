@@ -14,9 +14,9 @@
 (3)利用prnet拟合有效区域的人脸位置，抠出背景，以平均人脸像素填充背景，减少噪声影响，会在图片质量较好的情况下提高识别
 ```
 
-![MASK0](https://github.com/bleakie/MaskInsightface/blob/master/images/Akbar_Al_Baker_0001.jpg)
+![MASK0](https://github.com/bleakie/MaskInsightface/blob/master/images/src.png)
 
-![MASK1](https://github.com/bleakie/MaskInsightface/blob/master/images/Abner_Martinez_0001.jpg)
+![MASK1](https://github.com/bleakie/MaskInsightface/blob/master/images/mask.png)
 
 ### 0.安装
 
