@@ -1,5 +1,9 @@
 ## insightface制作自己的数据及其训练 ##
 
+**`2019.10.21`**: 更新人脸检测模型，检测器是基于SSH，相较于原版检测，该版本主要更新了误检
+
+**`2019.10.01`**: 公布人脸识别模型，模型基于glint和私有数据训练，在私有数据上拥有0.88的F1-score，insightface原始模型0.56
+
 说明：算法集成insightface：https://github.com/deepinsight/insightface
 
 改进地方：ssh(人脸检测)+prnet(68 landmark 人脸对齐， 3d人脸mask)+insightface
@@ -96,10 +100,14 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
 |  ACCU(%) |    99.82+  |    98.50+    |  98.25+   |
 
 ### 5.预训练模型
+1. 人脸检测模型请参见 https://github.com/bleakie/mxnet-ssh-face-detection （在自有数据集上标定+修改部分训练参数，可在FDDB上取得98.7%）
 
-人脸识别预训练模型（模型基于glint和私有数据训练，在私有数据上拥有0.88的F1-score，insightface原始模型0.56）
+2. 人脸识别预训练模型（模型基于glint和私有数据训练，在私有数据上拥有0.88的F1-score，insightface原始模型0.56）
 
 链接: https://pan.baidu.com/s/1GTBJf71Axwjs_yo5klAm9Q 提取码: uxi6 
 
 ## Todo
-释放训练好的模型（SSH,PRNET,人脸识别）
+0. 释放训练好的模型（PRNET，更新人脸检测基于Retina的RetinaDetection：https://github.com/bleakie/RetinaDetection）
+
+1. 近期会更新新的识别策略，可相较于现版本提高2%
+
