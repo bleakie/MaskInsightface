@@ -106,7 +106,7 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
    链接: https://drive.google.com/drive/folders/1zWadm9yu0rcjIQ_MnoXAQ27kA-CJYGms?usp=sharing 
 
 ## Todo
-0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection：https://github.com/bleakie/RetinaDetector）
+0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector）
 
 1. 近期会更新新的识别策略，可相较于现版本提高2%
 
