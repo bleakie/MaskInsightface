@@ -104,6 +104,7 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
 
 2. 人脸识别预训练模型（模型基于glint和私有数据训练,backbone resnet152，在私有数据上拥有0.88的F1-score，insightface原始模型0.56，因为进行了私有数据的增强训练，在开源测试集上效果一般）   
    链接: https://drive.google.com/drive/folders/1zWadm9yu0rcjIQ_MnoXAQ27kA-CJYGms?usp=sharing 
+   百度云链接: https://pan.baidu.com/s/1ySZeJWa-r7oS4E_8dpdo4w 提取码: enph 
 
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
