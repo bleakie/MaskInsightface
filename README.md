@@ -113,6 +113,7 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
    百度云链接: https://pan.baidu.com/s/1ySZeJWa-r7oS4E_8dpdo4w 提取码: enph 
    
 2.1. VarGFaceNet预训练模型
+使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE（没有使用mask）
 
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
