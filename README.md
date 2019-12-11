@@ -106,14 +106,17 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
 ### 5.预训练模型
 1. 人脸检测模型请参见 https://github.com/bleakie/mxnet-ssh-face-detection （在自有数据集上标定+修改部分训练参数，可在FDDB上取得98.7%）
 
-2. 人脸识别预训练模型（模型基于glint和私有数据训练,backbone resnet152，在私有数据上拥有0.88的F1-score，insightface原始模型0.56，因为进行了私有数据的增强训练，在开源测试集上效果一般）  
+2. 人脸识别预训练模型（模型基于glint和私有数据训练,backbone resnet152，在私有数据上拥有0.88的F1-score，insightface原始模型0.56，因为进行了私有数据的增强训练，在开源测试集上效果一般）
 
-   链接: https://drive.google.com/drive/folders/1zWadm9yu0rcjIQ_MnoXAQ27kA-CJYGms?usp=sharing 
-   
-   百度云链接: https://pan.baidu.com/s/1ySZeJWa-r7oS4E_8dpdo4w 提取码: enph 
+链接: https://drive.google.com/drive/folders/1zWadm9yu0rcjIQ_MnoXAQ27kA-CJYGms?usp=sharing 
+  
+百度云链接: https://pan.baidu.com/s/1ySZeJWa-r7oS4E_8dpdo4w 提取码: enph 
    
 2.1. VarGFaceNet预训练模型
+
 使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE（没有使用mask）
+
+百度云链接: https://pan.baidu.com/s/1x7aZVaslT6vtlpO-6zr1Pw 提取码: ds3c
 
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
