@@ -86,8 +86,9 @@ CUDA_VISIBLE_DEVICES=0 python3 src/data/dataset_merge.py --include 001_data,002_
 
 ### 4.result
 
-'参数设置'
+#### 4.1 Resnet训练
 
+```
 network backbone: r100 ( output=E, emb_size=512, prelu )
 
 loss function: arcface(m=0.5)
@@ -97,11 +98,27 @@ batch-size:256, 4gpu, config.fc7_wd_mult = 10
 lr = 0.004, lr_steps [105000, 125000, 150000], default.wd = 0.0005, end with 180001,
 
 then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.00001
+```
 
 
 |  Data    |      LFW   |    CFP_FP    |  AgeDB30  |
 | -------- | -----------|--------------|---------- |
 |  ACCU(%) |    99.82+  |    98.50+    |  98.25+   |
+
+
+#### 4.2 MobileFacenet训练
+
+```
+#!/usr/bin/env bash
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+set MXNET_CUDNN_AUTOTUNE_DEFAULT=0
+set MXNET_ENGINE_TYPE=ThreadedEnginePerDevice
+set MXNET_CPU_WORKER_NTHREADS=8
+# train softmax
+#nohup python3 -u train_softmax.py --network y1 --margin-s 32.0 --margin-m 0.1 --ckpt 1 --loss-type 0 --lr-steps 240000,360000,440000 --wd 0.00004 --fc7-wd-mult 10 --per-batch-size 80 --emb-size 256 --version-output GDC --data-dir ../../datasets/glint-shimao-id-zhaohang-output --prefix ../models/y2/mobilefacenet-res4-8-16-4-dim256 --target 'agedb_30,img_ours-retina-5' --max-steps 140002 2>&1 > mobilenet-1.log &
+# train arcface
+nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --ckpt 1 --loss-type 4 --lr-steps 600000,800000,1000000 --wd 0.00004 --fc7-wd-mult 10.0 --per-batch-size 48  --emb-size 256 --version-output GDC --data-dir ../../datasets/glint-shimao-id-zhaohang-output --prefix ../models/y2/y2-4-8-16-4-dim256 --pretrained ../models/y2/mobilefacenet-res4-8-16-4-dim256/mobilefacenet-res4-8-16-4-dim256,62 --target 'agedb_30,img_ours-retina-5' --max-steps 1200002 2>&1 > mobilenet-2.log &
+```
 
 ### 5.预训练模型
 5.1. 人脸检测模型请参见 https://github.com/bleakie/mxnet-ssh-face-detection （在自有数据集上标定+修改部分训练参数，可在FDDB上取得98.7%）
@@ -120,7 +137,7 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
 
  | Backbone     |  CFP_FP(%)       |  AGE_db30(%)         |  Speed(ms) | Download |
 |--------------|-----------|--------------|----------|----------|
-|y2-res2-6-10-2-dim256       | 97.18      |    97.52      |  22 |  - |[model](https://pan.baidu.com/s/1-5t5pd98FwZDCE-RK2WiHA)  |
+|y2-res2-6-10-2-dim256       | 97.18      |    97.52      |  22 |[model](https://pan.baidu.com/s/1-5t5pd98FwZDCE-RK2WiHA)  |
 |y2-res4-8-16-4-dim256     | 94.96     |    96.18      |  33 |[model](https://pan.baidu.com/s/1PPpGy87aUoSfq4k3VpZwIw)  |
 
 ## Todo
