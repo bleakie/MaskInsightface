@@ -122,11 +122,13 @@ nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --
 
 （2） CenterMulti: 人脸检测+landmark可参考[**CenterMulti**](https://github.com/bleakie/CenterMulti)，效果更好，而且支持landmark的confidence
 
-#### 5.2. mask人脸识别预训练模型（模型基于glint和私有数据训练,backbone resnet152，在私有数据上拥有0.88的F1-score，insightface原始模型0.56，因为进行了私有数据的增强训练，在开源测试集上效果一般）
+#### 5.2. mask人脸识别预训练模型
+模型基于glint和私有数据训练,backbone resnet152，在私有数据上拥有0.88的F1-score，insightface原始模型0.56，因为进行了私有数据的增强训练，在开源测试集上效果一般
 [**google**](https://drive.google.com/drive/folders/1zWadm9yu0rcjIQ_MnoXAQ27kA-CJYGms?usp=sharing)
 [**baidu**](https://pan.baidu.com/s/1ySZeJWa-r7oS4E_8dpdo4w)，提取码: enph 
    
-#### 5.3. VarGFaceNet预训练模型，使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE（没有使用mask）
+#### 5.3. VarGFaceNet预训练模型
+使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE（没有使用mask）
 [**baidu**](https://pan.baidu.com/s/1x7aZVaslT6vtlpO-6zr1Pw)，提取码: ds3c
  
 #### 5.4. MobileFaceNet预训练模型，使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE(没有使用mask),res4-8-16-4-dim256在个人测试集上效果更好
