@@ -115,6 +115,13 @@ then retrain with lr = 0.0004, lr_steps[200000, 300000, 400000], default.wd = 0.
 5.3. VarGFaceNet预训练模型，使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE（没有使用mask）
 
      百度云链接: https://pan.baidu.com/s/1x7aZVaslT6vtlpO-6zr1Pw 提取码: ds3c
+ 
+5.4. MobileFaceNet预训练模型，使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE(没有使用mask),res4-8-16-4-dim256在个人测试集上效果更好
+
+ | Backbone     |  CFP_FP(%)       |  AGE_db30(%)         |  Speed(ms) | Download |
+|--------------|-----------|--------------|----------|----------|
+|y2-res2-6-10-2-dim256       | 97.18      |    97.52      |  22 |  - |[model](https://pan.baidu.com/s/1-5t5pd98FwZDCE-RK2WiHA)  |
+|y2-res4-8-16-4-dim256     | 94.96     |    96.18      |  33 |[model](https://pan.baidu.com/s/1PPpGy87aUoSfq4k3VpZwIw)  |
 
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
