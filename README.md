@@ -136,7 +136,7 @@ nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --
  | Backbone     |  CFP_FP(%)       |  AGE_db30(%)         |  Speed(ms) | Download |
 |--------------|-----------|--------------|----------|----------|
 |y2-res2-6-10-2-dim256       | 97.18      |    97.52      |  22 |[model](https://pan.baidu.com/s/1-5t5pd98FwZDCE-RK2WiHA)  |
-|y2-res4-8-16-4-dim256     | 94.96     |    96.18      |  33 |[model](https://pan.baidu.com/s/1PPpGy87aUoSfq4k3VpZwIw)  |
+|y2-res4-8-16-4-dim256     | 98.03     |    98.30      |  33 |[model](https://pan.baidu.com/s/1lw598J3aN_7IuuB9zDI0Dw)  |
 
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
