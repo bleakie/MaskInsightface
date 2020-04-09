@@ -42,7 +42,7 @@ class SSHDetector:
         self._bbox_pred = nonlinear_pred
 
         base_path = os.path.dirname(__file__)
-        sym, arg_params, aux_params = mx.model.load_checkpoint(base_path + '/model/model-v2.0/e2e', 1)
+        sym, arg_params, aux_params = mx.model.load_checkpoint(base_path + '/model/e2e', 0)
         self.nms = gpu_nms_wrapper(self.nms_threshold, self.ctx_id)
         self.pixel_means = np.array([103.939, 116.779, 123.68])  # BGR
 

@@ -1,4 +1,5 @@
 ## insightface制作自己的数据及其训练 ##
+**`2020.04.09`**: 更新基于SSR-Net的性别和年龄预测网络,在私有数据集上gender(98.53), age_mae(3.29)
 
 **`2019.12.30`**: 更新MobileFaceNet的训练模型，参考> [**ZQCNN**](https://github.com/zuoqing1988/ZQCNN) ，人脸检测+landmark可参考[**CenterMulti**](https://github.com/bleakie/CenterMulti)，效果更好，而且支持landmark的confidence
 
@@ -128,10 +129,10 @@ nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --
 [**baidu**](https://pan.baidu.com/s/1ySZeJWa-r7oS4E_8dpdo4w)，提取码: enph 
    
 #### 5.3. VarGFaceNet预训练模型
-使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE（没有使用mask）
+使用RetinaFace的5点landmark对齐src/common/face_align_util.py/ARC_FACE（没有使用mask）
 [**baidu**](https://pan.baidu.com/s/1x7aZVaslT6vtlpO-6zr1Pw)，提取码: ds3c
  
-#### 5.4. MobileFaceNet预训练模型，使用RetinaFace的5点landmark对齐face_align_util.py/ARC_FACE(没有使用mask),res4-8-16-4-dim256在个人测试集上效果更好
+#### 5.4. MobileFaceNet预训练模型，使用RetinaFace的5点landmark对齐src/common/face_align_util.py/ARC_FACE(没有使用mask),res4-8-16-4-dim256在个人测试集上效果更好
 
  | Backbone     |  CFP_FP(%)       |  AGE_db30(%)         |  Speed(ms) | Download |
 |--------------|-----------|--------------|----------|----------|
