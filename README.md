@@ -1,5 +1,5 @@
 ## insightface制作自己的数据及其训练 ##
-**`2020.04.09`**: 更新基于SSR-Net的性别和年龄预测网络,在私有数据集上gender(98.53), age_mae(3.29)
+**`2020.04.09`**: 更新基于SSR-Net的性别和年龄预测网络,在私有数据集上gender(98.53), age_mae(3.29)，[**原作者**](https://github.com/shamangary/SSR-Net)
 
 **`2019.12.30`**: 更新MobileFaceNet的训练模型，参考> [**ZQCNN**](https://github.com/zuoqing1988/ZQCNN) ，人脸检测+landmark可参考[**CenterMulti**](https://github.com/bleakie/CenterMulti)，效果更好，而且支持landmark的confidence
 
