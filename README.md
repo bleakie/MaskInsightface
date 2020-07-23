@@ -33,14 +33,10 @@
 ### 1.生成对齐后的数据集
 
 #### 1.1.数据下载
+
 |  Data    |      deepglint   |    数据集集合    |  insightface  |
 | -------- | -----------|--------------|---------- |
-|  Url |    [**deepglint**](http://trillionpairs.deepglint.com/data)  |    98.50+    |  98.25+   |
-
-
-
-[**数据集集合**](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch#Data-Zoo)
-https://github.com/deepinsight/insightface/wiki/Dataset-Zoo
+|  Url |    [**download**](http://trillionpairs.deepglint.com/data)  |    [**download**](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch#Data-Zoo)    |  [**download**](https://github.com/deepinsight/insightface/wiki/Dataset-Zoo)   |
 
 cd make_rec
 
