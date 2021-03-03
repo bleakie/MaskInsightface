@@ -51,7 +51,8 @@ python demo.py
 
 #### 2.1.模型下载
 
+
  |      Backbone       |     差距    |  Speed  | Download |
  |---------------------|--------- --|---------|----------|
- |glint360k_r100FC_1.0 |   0.0001   |    8×   |[code:ty5u)](https://pan.baidu.com/s/1De9xD_cWEgZ-f9g8bzmfFA)|
+ |glint360k_r100FC_1.0 |   0.0001   |    8×   |[**code:ty5u**](https://pan.baidu.com/s/1De9xD_cWEgZ-f9g8bzmfFA) |
 
