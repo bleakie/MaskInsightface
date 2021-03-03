@@ -1,4 +1,6 @@
 ## insightface制作自己的数据及其训练 ##
+**`2021.03.03`**: 更新insightface TensorRT模型，trt模型与原版差距<0.01，[**参考InsightFace-REST**](https://github.com/SthPhoenix/InsightFace-REST)
+
 **`2020.04.09`**: 更新基于SSR-Net的性别和年龄预测网络,在私有数据集上gender(98.53), age_mae(3.29)，[**原作者SSR-Net**](https://github.com/shamangary/SSR-Net)
 
 **`2019.12.30`**: 更新MobileFaceNet的训练模型，参考> [**ZQCNN**](https://github.com/zuoqing1988/ZQCNN) ，人脸检测+landmark可参考[**CenterMulti**](https://github.com/bleakie/CenterMulti)，效果更好，而且支持landmark的confidence
@@ -144,5 +146,5 @@ nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
 
-1. 近期会更新新的识别策略，可相较于现版本提高2%
+1. 近期会更新新的静默活体识别模型
 
