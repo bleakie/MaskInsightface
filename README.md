@@ -143,9 +143,9 @@ nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --
 |y2-res2-6-10-2-dim256       | 97.18      |    97.52      |  22 |[model](https://pan.baidu.com/s/1-5t5pd98FwZDCE-RK2WiHA)  |
 |y2-res4-8-16-4-dim256     | 98.03     |    98.30      |  33 |[model](https://pan.baidu.com/s/1lw598J3aN_7IuuB9zDI0Dw)  |
 
-### TensorRT转换 ##
+### 6. TensorRT转换 ##
 
-### List of supported models:
+### 6.1 List of supported models:
 
 #### Detection:
 
