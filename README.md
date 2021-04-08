@@ -143,6 +143,37 @@ nohup python3 -u train_softmax.py --network y1 --margin-s 64.0 --margin-m 0.5 --
 |y2-res2-6-10-2-dim256       | 97.18      |    97.52      |  22 |[model](https://pan.baidu.com/s/1-5t5pd98FwZDCE-RK2WiHA)  |
 |y2-res4-8-16-4-dim256     | 98.03     |    98.30      |  33 |[model](https://pan.baidu.com/s/1lw598J3aN_7IuuB9zDI0Dw)  |
 
+### TensorRT转换 ##
+
+### List of supported models:
+
+#### Detection:
+
+| Model                 | Auto download | Inference code | Source                                                                                          |
+|:----------------------|:--------------|:---------------|:------------------------------------------------------------------------------------------------|
+| retinaface_r50_v1     | Yes           | Yes            | [official package](https://github.com/deepinsight/insightface/tree/master/python-package)       |
+| retinaface_mnet025_v1 | Yes           | Yes            | [official package](https://github.com/deepinsight/insightface/tree/master/python-package)       |
+| retinaface_mnet025_v2 | Yes           | Yes            | [official package](https://github.com/deepinsight/insightface/tree/master/python-package)       |
+| mnet_cov2             | No            | Yes            | [mnet_cov2](https://github.com/deepinsight/insightface/tree/master/detection/RetinaFaceAntiCov) |
+| centerface            | Yes           | Yes            | [Star-Clouds/CenterFace](https://github.com/Star-Clouds/CenterFace)                             |
+
+#### Recognition:
+
+| Model                  | Auto download | Inference code | Source                                                                                                    |
+|:-----------------------|:--------------|:---------------|:----------------------------------------------------------------------------------------------------------|
+| arcface_r100_v1        | Yes           | Yes            | [official package](https://github.com/deepinsight/insightface/tree/master/python-package)                 |
+| r100-arcface-msfdrop75 | No            | Yes            | [SubCenter-ArcFace](https://github.com/deepinsight/insightface/tree/master/recognition/SubCenter-ArcFace) |
+| r50-arcface-msfdrop75  | No            | Yes            | [SubCenter-ArcFace](https://github.com/deepinsight/insightface/tree/master/recognition/SubCenter-ArcFace) |
+| glint360k_r100FC_1.0   | No            | Yes            | [Partial-FC](https://github.com/deepinsight/insightface/tree/master/recognition/partial_fc)               |
+| glint360k_r100FC_0.1   | No            | Yes            | [Partial-FC](https://github.com/deepinsight/insightface/tree/master/recognition/partial_fc)               |
+
+#### Other:
+
+| Model        | Auto download | Inference code | Source                                                                                          |
+|:-------------|:--------------|:---------------|:------------------------------------------------------------------------------------------------|
+| genderage_v1 | Yes           | Yes            | [official package](https://github.com/deepinsight/insightface/tree/master/python-package)       |
+| 2d106det     | No            | No             | [coordinateReg](https://github.com/deepinsight/insightface/tree/master/alignment/coordinateReg) |
+
 ## Todo
 0. 释放训练好的模型（PRNET，更新人脸检测模型基于Retina的RetinaDetection 链接：https://github.com/bleakie/RetinaDetector ）
 
